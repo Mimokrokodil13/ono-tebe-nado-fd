@@ -2,9 +2,11 @@
 
 header{ 
     display: grid;
-    grid-template-columns: 1fr 148px 1fr;
+    grid-template-columns: 1fr min-content 1fr;
     padding: 92px 50px 96px 50px;
     align-items:center;
+    font-family: 'Raleway' ;
+    font-size: 18px;
 }
 .header__menu{
     display: flex;
@@ -13,10 +15,12 @@ header{
 .header__menu li{
     list-style:circle;
 }
-.header__logo{
-    
+.header__logo img{
+    width: 148px;
+    height: 105px;
 }
 header address{
+    text-underline-offset: auto;
     max-width: 240px;
     justify-self:end;
 }
@@ -25,14 +29,74 @@ header address{
 
 
 main{
+    
 
 }
 .cover{
+    position:relative;
     margin-bottom: 180px;
     padding: 50px;
     padding-top: 165px;
-    background: url('../images/cover.jpg');
+    background: url('../images/cover.jpg') ;
+    color: #FFFFFF;
+    background-color: #000000;
 }
+.overlay{
+    position: absolute;
+    background-color: #000000;
+    opacity: 60%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.cover__title{
+    position: relative;
+    display: grid;
+    gap: 20px;
+    font-style: 'Raleway';
+    font-weight: 700;
+    font-size: 100px;
+    letter-spacing: 30px;
+    margin-bottom: 106px;
+}
+.aligned-text{
+
+}
+.aligned-text_center{
+    justify-self: center;
+    margin-left: 35px;
+}
+.aligned-text_right{
+    justify-self: end;
+    margin-right: -30px;
+}
+.description{
+    font-size: 22px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    text-transform: uppercase;
+}
+.description p{
+    word-spacing:18px;
+}
+.description button{
+    background-color: transparent;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 12px 32px 11px 31px;
+    border: 1px solid white;
+}
+
+
+
+
+
+
+
 .lots{
     margin-bottom: 120px;
 }
