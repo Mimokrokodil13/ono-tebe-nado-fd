@@ -3,7 +3,7 @@ header {
   grid-template-columns: 1fr min-content 1fr;
   padding: 92px 50px 93px 50px;
   align-items: center;
-  font-family: 'Raleway';
+  font-family: 'Raleway',sans-serif;
   font-size: 18px;
 }
 .header__menu {
@@ -11,12 +11,16 @@ header {
   gap: 0 33px;
 }
 .header__menu li {
-  text-decoration: underline;
   list-style-type: circle;
+}
+.header__menu a{
+  text-decoration: underline;
   text-underline-offset: 4px;
 }
-.header__menu li.first_elem {
+li.header__links-list-item_no-bullit{
   list-style-type: none;
+}
+a.header__link_active{
   text-decoration: none;
 }
 .header__logo img {
@@ -58,9 +62,10 @@ header .address {
   position: relative;
   display: grid;
   gap: 20px;
-  font-style: 'Raleway';
+  font-family: 'Raleway',sans-serif;
   font-weight: 700;
   font-size: 100px;
+  text-transform: uppercase;
   letter-spacing: 30px;
   margin-bottom: 100px;
 }
@@ -85,6 +90,7 @@ header .address {
   word-spacing: 19px;
 }
 .description button {
+  cursor: pointer;
   background-color: transparent;
   color: #ffffff;
   text-transform: uppercase;
@@ -97,11 +103,12 @@ header .address {
   margin-bottom: 120px;
   padding: 0 24px;
 }
-.lots h1 {
+.lots h2 {
   font-size: 40px;
   text-transform: uppercase;
   padding-left: 40px;
   padding-bottom: 27px;
+  text-underline-offset: 4px;
 }
 .lots a,
 article {
@@ -122,22 +129,22 @@ article {
 .lots__card-list {
   display: flex;
   justify-content: space-between;
+  row-gap:25px;
   flex-wrap: wrap;
   color: #ffffff;
   margin-bottom: 30px;
 }
-.lot1 {
+
+.card_type_film {
   background: url('../images/card-lot-01.jpg');
-  background-position: center;
-  background-size: cover;
 }
-.lot2 {
+.card_type_book {
   background: url('../images/card-lot-02.jpg');
-  background-position: center;
-  background-size: cover;
 }
-.lot3 {
+.card_type_picture {
   background: url('../images/card-lot-03.jpg');
+}
+.lots__card-list-item{
   background-position: center;
   background-size: cover;
 }
@@ -147,11 +154,11 @@ article {
   justify-content: space-between;
   padding: 48px 40px;
 }
-.lots__card-list-item h2,
+.lots__card-list-item h3,
 .lots__card-list-item p {
   z-index: 2;
 }
-.lots__card-list-item h2 {
+.lots__card-list-item h3 {
   font-size: 22px;
   font-weight: 700;
   text-decoration: underline;
@@ -192,7 +199,7 @@ a.lots__look-more-link {
 .about__text {
   margin-top: 98px;
 }
-.about__text h1 {
+.about__text h2 {
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
@@ -201,8 +208,10 @@ a.lots__look-more-link {
 .about__text p {
   font-size: 20px;
 }
-p.first_elem {
-  margin-bottom: 24px;
+.about__text-paragraph{
+  display: flex;
+  flex-direction: column;
+  row-gap:24px;
 }
 
 footer {
@@ -226,7 +235,7 @@ footer .address {
 .footer__menu-list li {
   text-decoration: underline;
 }
-.footer__menu-list li.first_elem {
+.footer__menu-list li.footer__menu-link_active {
   text-decoration: none;
 }
 
